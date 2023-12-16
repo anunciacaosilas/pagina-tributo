@@ -61,6 +61,7 @@ div.conteudo {
   overflow: auto;
   /* Oculta o scroll vertical da div*/
   overflow-x: hidden;
+  height: calc(100vh - 100px);
 }
 
 div.borda_img {
