@@ -12,16 +12,28 @@ body {
 /* ##################################  MENU ############################ */
 
 nav {
+  display: flex;
   background-color: rgb(18, 7, 39);
+  /* flex-flow: row wrap; */
   list-style: none;
+  justify-content: space-around;
   line-height: 10px;
   padding: 10px;
   position: fixed;
   opacity: 0.9;
-  width: 46%;
+  /* width: 46%; */
   margin-top: 15px;
   margin-left: 15px;
   border-radius: 20px;
+}
+
+@media screen and (max-width:768px){
+  nav {
+    width: 100%;
+    /* flex-direction: column-reverse; */
+    flex-flow: column wrap;
+    justify-content: space-around;
+  }
 }
 
 nav a {
@@ -61,6 +73,7 @@ div.conteudo {
   overflow: auto;
   /* Oculta o scroll vertical da div*/
   overflow-x: hidden;
+  height: calc(100vh - 90px)
 }
 
 div.borda_img {
@@ -90,6 +103,7 @@ div img {
 }
 
 div.vida {
+  flex-flow: row wrap;
   color: #fff;
   font-size: 22px;
   text-decoration: none;
@@ -111,9 +125,10 @@ div.vida a:hover {
 
 div.container_filme {
   display: flex;
+  width: 100%;
   flex-flow: row wrap;
   margin: 10px;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
@@ -121,6 +136,13 @@ div.container_filme {
   padding: 20px;
   width: 320px;
   margin: 10px;
+}
+
+@media screen and (max-width:768px){
+  div .container_filme {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 .container_filme a {
@@ -156,6 +178,7 @@ footer .icons {
   display: inline-flex;
   border: none;
   height: 60px;
+  flex-flow: row wrap;
 }
 
 footer {
@@ -166,6 +189,15 @@ footer {
   color: #fff;
   font-size: 16px;
   opacity: 0.7;
-  height: 100px;
-  border-radius: 10%;
+  height: 90px;
+  flex-flow: row wrap;
+  
 }
+
+@media (max-width:768px) {
+  nav {
+    height: 80px;
+  }
+  
+}
+/* teste */
