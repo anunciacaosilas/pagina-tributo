@@ -1,12 +1,16 @@
 body {
   margin: 0;
+  display: flex;
   font-family: FreeMono, monospace;
   background-image: url(../imagens/fnd8.png);
   background-image: 100%;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-position: cover;
   background-size: cover;
   overflow: hidden;
+ 
+  
 }
 
 /* ##################################  MENU ############################ */
@@ -14,17 +18,16 @@ body {
 nav {
   display: flex;
   background-color: rgb(18, 7, 39);
-  /* flex-flow: row wrap; */
   list-style: none;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   line-height: 10px;
   padding: 10px;
   position: fixed;
   opacity: 0.9;
-  /* width: 46%; */
   margin-top: 15px;
   margin-left: 15px;
   border-radius: 20px;
+
 }
 
 @media screen and (max-width:768px){
@@ -85,6 +88,8 @@ div.borda_img {
 
 img.img_pantera {
   border: none;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 h1 {
@@ -175,10 +180,11 @@ h3.titulo {
 /* ##################################  RODAPÉ  ############################ */
 
 footer .icons {
-  display: inline-flex;
+  display: flex;
+  display: inline-flex; 
   border: none;
   height: 60px;
-  flex-flow: row wrap;
+  /* flex-flow:row wrap; */
 }
 
 footer {
@@ -198,6 +204,11 @@ footer {
   nav {
     height: 80px;
   }
-  
+
 }
-/* teste */
+
+@media (max-width:768px) {
+  body {
+    height: auto;
+  }
+}
